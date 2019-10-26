@@ -17,7 +17,26 @@ public class PageController {
 		public ModelAndView index() {
 			System.out.println("invoking index()");
 			ModelAndView mv=new ModelAndView("page");
-			mv.addObject("greeting", "Wel Come to Spring WEB MVmvc");
+			mv.addObject("title", "Home");
+			mv.addObject("userClickHome", true);
+			return mv;
+		}
+		
+		@RequestMapping(value= "/about")
+		public ModelAndView about() {
+			System.out.println("invoking index()");
+			ModelAndView mv=new ModelAndView("page");
+			mv.addObject("title", "About US");
+			mv.addObject("userClickAbout", true);
+			return mv;
+		}
+		
+		@RequestMapping(value= "/contact")
+		public ModelAndView contact() {
+			System.out.println("invoking index()");
+			ModelAndView mv=new ModelAndView("page");
+			mv.addObject("title", "Contact US");
+			mv.addObject("userClickContact", true);
 			return mv;
 		}
 
